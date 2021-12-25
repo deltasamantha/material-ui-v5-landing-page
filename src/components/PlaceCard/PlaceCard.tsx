@@ -1,9 +1,11 @@
-import { Collapse, useMediaQuery, useTheme } from "@mui/material";
+import { Button, Collapse, useMediaQuery, useTheme } from "@mui/material";
 import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import ColorButton from "../ColorButton/ColorButton";
 import { ANIMATION_DURATION } from "../Welcome/Welcome";
 
 interface Props {
@@ -59,6 +61,21 @@ const PlaceCard: React.FC<Props> = ({
             {description}
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small" variant="contained" disableElevation>
+            Share
+          </Button>
+          <Button
+            size="small"
+            variant="outlined"
+            color="secondary"
+            disableElevation
+          >
+            Learn More
+          </Button>
+          {/* <AppButton size="small">Learn More</AppButton> */}
+          <ColorButton size="small">More</ColorButton>
+        </CardActions>
       </Card>
     </Collapse>
   );
