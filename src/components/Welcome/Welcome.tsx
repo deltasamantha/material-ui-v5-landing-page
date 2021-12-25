@@ -3,6 +3,8 @@ import { Box, Collapse, IconButton, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link as Scroll } from "react-scroll";
 
+export const ANIMATION_DURATION = 3000;
+
 const Welcome = () => {
   const [pageLoaded, setPageLoaded] = useState<boolean>(false);
 
@@ -13,7 +15,7 @@ const Welcome = () => {
   return (
     <Box
       sx={{
-        color: "#fff",
+        color: "text.primary",
         height: "100vh",
         alignItems: "center",
         justifyContent: "center",
@@ -22,7 +24,7 @@ const Welcome = () => {
     >
       <Collapse
         in={pageLoaded}
-        timeout={3000}
+        timeout={ANIMATION_DURATION}
         orientation="vertical"
         collapsedSize={"10px"}
       >
@@ -40,7 +42,7 @@ const Welcome = () => {
               variant="h3"
               display="inline"
               ml="1rem"
-              color={"#5AFF3D"}
+              color={"text.secondary"}
             >
               other
             </Typography>
@@ -53,7 +55,7 @@ const Welcome = () => {
             >
               <ArrowDownIcon
                 sx={{
-                  color: "#5AFF3D",
+                  color: "secondary.main",
                   fontSize: "4rem",
                 }}
               />
