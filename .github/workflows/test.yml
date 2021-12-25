@@ -11,6 +11,6 @@ jobs:
       - name: Install node modules
         run: npm install
       - name: Build the project
-        run: npm build
+        run: npm run build
       - name: Setup finished
         run: echo "All set to go..!!!"
