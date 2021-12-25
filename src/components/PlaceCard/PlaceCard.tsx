@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { ANIMATION_DURATION } from "../Welcome/Welcome";
 
 interface Props {
   image: string;
@@ -23,11 +24,17 @@ const PlaceCard: React.FC<Props> = ({
   return (
     <Collapse
       in={animate}
-      timeout={3000}
+      timeout={ANIMATION_DURATION}
       orientation="vertical"
       collapsedSize={"10px"}
     >
-      <Card sx={{ maxWidth: 645, backgroundColor: "#00000055", m: "2em" }}>
+      <Card
+        sx={{
+          maxWidth: 645,
+          backgroundColor: "primary.main",
+          m: "2em",
+        }}
+      >
         <CardMedia
           component="img"
           alt="green iguana"
@@ -40,13 +47,13 @@ const PlaceCard: React.FC<Props> = ({
             component="div"
             fontSize={matches ? "2rem" : "1.3rem"}
             fontWeight="bold"
-            color="#FFFFFF"
+            color="text.primary"
           >
             {title}
           </Typography>
           <Typography
             variant="body2"
-            color="#FFFFFF"
+            color="text.primary"
             fontSize={matches ? "1.1rem" : "1rem"}
           >
             {description}

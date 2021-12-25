@@ -15,38 +15,25 @@ function Header() {
             alignItems: "center",
           }}
         >
-          {/* Logo */}
-          {/* <Box>
-            <IconButton>
-              <AirplaneIcon
-                color="action"
-                sx={{ color: "white", fontSize: "2rem" }}
-              />
-            </IconButton>
-          </Box> */}
           <Box flex={1} mx={"1rem"}>
-            <Typography variant="h4" display="inline" color={"white"}>
+            <Typography variant="h4" display="inline" color={"text.primary"}>
               Sri
             </Typography>
             <Typography
               variant="h4"
               display="inline"
               ml="1rem"
-              color={"#5AFF3D"}
+              color={"text.secondary"}
             >
               Lanka
             </Typography>
           </Box>
           <Box>
             <IconButton>
-              <MenuIcon
-                color="action"
-                sx={{ color: "white", fontSize: "2rem" }}
-              />
+              <MenuIcon sx={{ color: "primary.light", fontSize: "2rem" }} />
             </IconButton>
           </Box>
         </Box>
-        {/* <h1>My Island</h1> */}
       </Toolbar>
     </AppBar>
   );
